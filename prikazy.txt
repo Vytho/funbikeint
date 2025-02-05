@@ -1,0 +1,2 @@
+spustenie servera: php -S localhost:8000
+odkaz na stranku: http://localhost:8000/

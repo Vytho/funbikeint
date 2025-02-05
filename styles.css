@@ -1,0 +1,273 @@
+
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+/* Hero section with background image */
+.hero-section {
+    background-image: url('./assets/main_picture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px; /* Adjust height as needed */
+    text-align: center;
+}
+
+/* Dark overlay to ensure consistent darkness */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity for uniform darkness */
+    z-index: 1;
+}
+
+/* Ensure header and quote are on top of the overlay */
+header, .quote-section {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+    position: relative; /* Needed for absolute positioning */
+}
+
+/* Logo container */
+header .logo {
+    flex-shrink: 0; 
+    margin-left: 20px; /* Moves logo away from the edge */
+}
+
+/* Ensure the logo image is sized properly */
+header .logo img {
+    width: 200px;
+}
+
+/* Shop name container */
+header .shop-name-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+/* Quote section styling */
+.quote-section {
+    max-width: 800px;
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+    margin-top: 20px; /* Adds space below header */
+    text-align: center;
+    background: transparent; /* No background */
+}
+
+/* Main content styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Info block styles */
+.info-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.info-block h2 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+
+/*  This two blocks allow to make links to other pages*/
+.info-block a {
+    display: block; /* Make the entire block clickable */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep text color same as default */
+}
+.info-block a:hover {
+    color: #007BFF; /* Highlight text color on hover */
+}
+
+
+
+
+.info-block h2 a:hover {
+    color: #007BFF;
+}
+
+.info-block p {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between phone and email */
+    max-width: 300px; /* Ensure both the number and email have the same width */
+    margin: 0 auto;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text and icon together */
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-info p i.fas.fa-phone,
+.contact-info p i.fas.fa-envelope {
+    font-size: 20px; /* Adjust icon size for balance */
+}
+
+/* Map Section */
+.map-section {
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+.map-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Ensure the map is responsive and takes up the full width of the container */
+.map-section iframe {
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+/* Social media */
+.social-media {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 2px solid #ddd;
+}
+
+.social-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer .copyright p {
+    font-size: 14px;
+    margin-top: 20px;
+}
