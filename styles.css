@@ -259,6 +259,24 @@ body {
     text-decoration: underline;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links .social-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    transform: scale(1.1);
+}
+
+
 /* Footer styles */
 footer {
     background-color: #333;
