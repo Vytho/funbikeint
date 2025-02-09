@@ -172,13 +172,17 @@ header .shop-name-container {
 
 /* Footer */
 footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
+    background: #333;
     color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer .copyright p {
-    font-size: 14px;
-    margin-top: 20px;
+.footer {
+    margin-bottom: 10px; /* Adds space between contact and copyright */
 }
+

@@ -21,6 +21,7 @@
     justify-content: center;
     height: 500px; /* Adjust height as needed */
     text-align: center;
+    margin-bottom: 60px;
 }
 
 /* Dark overlay to ensure consistent darkness */
@@ -102,190 +103,117 @@ body {
     line-height: 1.6;
 }
 
-/* Info block styles */
+/* Info Blocks */
 .info-blocks {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
     flex-wrap: wrap;
+    max-width: 1200px;
 }
-
 .info-block {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    overflow: hidden;
-    text-align: center;
+    background: white;
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
 }
-
 .info-block:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
-
 .info-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
-
-.info-block h2 a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-
-/*  This two blocks allow to make links to other pages*/
-.info-block a {
-    display: block; /* Make the entire block clickable */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep text color same as default */
-}
-.info-block a:hover {
-    color: #007BFF; /* Highlight text color on hover */
-}
-
-
-
-
-.info-block h2 a:hover {
+.info-block h2 {
+    font-size: 22px;
     color: #007BFF;
 }
 
+.info-block a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Makes text inherit the default color */
+    display: block; /* Ensures the entire block is clickable */
+}
+
+.info-block h2,
 .info-block p {
-    color: #777;
-    font-size: 16px;
-    margin-bottom: 0;
+    color: black; /* Set text color to black or any other desired color */
 }
 
-/* Contact Section */
-.contact-section {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 30px;
-    margin: 40px 0;
+
+/* Opening Hours */
+.opening-hours-container {
+    background: #fff;
+    padding: 20px;
+    text-align: left;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
 }
-
-.contact-section h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
+.opening-hours table {
+    width: 100%;
+    margin-top: 10px;
 }
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Space between phone and email */
-    max-width: 300px; /* Ensure both the number and email have the same width */
-    margin: 0 auto;
-}
-
-.contact-info p {
+.opening-hours td {
+    padding: 8px;
     font-size: 18px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the text and icon together */
-}
-
-.contact-info i {
-    margin-right: 10px;
-}
-
-.contact-info p i.fas.fa-phone,
-.contact-info p i.fas.fa-envelope {
-    font-size: 20px; /* Adjust icon size for balance */
 }
 
 /* Map Section */
 .map-section {
-    background-color: white;
     text-align: center;
-    padding: 30px;
-    margin: 40px 0;
+    padding: 40px;
+    background: white;
     border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto;
 }
-
-.map-section h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-/* Ensure the map is responsive and takes up the full width of the container */
 .map-section iframe {
-    max-width: 50%;
+    width: 100%;
+    height: 300px;
     border-radius: 8px;
 }
 
-/* Social media */
+/* Social Media */
 .social-media {
     text-align: center;
-    margin: 40px 0;
     padding: 20px;
-    background-color: #f8f8f8;
-    border-top: 2px solid #ddd;
+    background: #f8f8f8;
 }
-
-.social-header {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 1.2em;
-    margin: 0 10px;
-}
-
-.social-links a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 .social-links {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
-
-.social-links .social-icon {
-    width: 40px; /* Adjust size as needed */
-    height: 40px;
-    transition: transform 0.3s ease;
+.social-icon {
+    width: 40px;
+    transition: transform 0.3s;
 }
-
-.social-links .social-icon:hover {
+.social-icon:hover {
     transform: scale(1.1);
 }
 
-
-/* Footer styles */
+/* Footer */
 footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
+    background: #333;
     color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer .copyright p {
-    font-size: 14px;
-    margin-top: 20px;
+.footer {
+    margin-bottom: 10px; /* Adds space between contact and copyright */
 }
